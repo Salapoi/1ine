@@ -8,19 +8,19 @@ module Lahti
         def_delegators :@location, :line, :col, :length
 
         def initialize(type, lexeme, location)
-            @type = type
-            @lexeme = lexeme
-            @location = location
+          @type = type
+          @lexeme = lexeme
+          @location = location
         end
 
         def to_s
-            "#{type} #{lexeme} #{literal}"
-          end
-      
-          def ==(other)
-            type == other.type &&
-            lexeme == other.lexeme &&
-            location == other.location
-          end
+          "#{type} #{lexeme} #{literal}"
+        end
+
+        def ==(other)
+          type == other.type &&
+          lexeme == other.lexeme &&
+          location == other.location
+        end
     end
 end
