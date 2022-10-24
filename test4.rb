@@ -14,8 +14,9 @@ def lineValue(char)
     p $vals[char] if $vals.include?char
     p "1+1" if char==0
     Kernel.eval("1+1") if char==1
+    p 2 if char=="2"
 end
 
 lineValue('A')
 lineValue(0)
-p lineValue(1)
+p lineValue("2")
